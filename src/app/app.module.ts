@@ -7,6 +7,7 @@ import { RootComponent } from './components/root/root.component';
 import { HomeComponent } from './components/home/home.component';
 import {AppMaterialModule} from './app-material.module';
 import {HttpClientModule} from '@angular/common/http';
+import {CountUpModule} from 'countup.js-angular2';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     AppMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    CountUpModule
   ],
   providers: [],
   bootstrap: [RootComponent]

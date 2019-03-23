@@ -1,0 +1,30 @@
+<mat-grid-list cols="2">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-card>
+      <mat-card-header>Toon</mat-card-header>
+        <mat-card-content>
+          <span class="flex-spacer"></span>
+          <ng-container *ngIf="this.toon; else spinnie">
+            {{ this.toon | currency: 'EUR' }}
+          </ng-container>
+          <span class="flex-spacer"></span>
+        </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <mat-card>
+      <mat-card-header>Bob</mat-card-header>
+      <mat-card-content>
+        <span class="flex-spacer"></span>
+        <ng-container *ngIf="this.bob; else spinnie">
+          {{ this.bob | currency: 'EUR' }}
+        </ng-container>
+        <span class="flex-spacer"></span>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #spinnie>
+  <mat-spinner [style.margin]="'0 auto'"></mat-spinner>
+</ng-template>
